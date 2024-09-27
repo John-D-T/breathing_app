@@ -36,9 +36,10 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(appName: String, modifier: Modifier = Modifier) {
-    Surface(color=Color.Green) {
+    Surface(color=Color.Black) {
         Text(
             text = "Welcome to $appName!",
+            color = Color.White,
             modifier = modifier.padding(24.dp)
         )
     }
