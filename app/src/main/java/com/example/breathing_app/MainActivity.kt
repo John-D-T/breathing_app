@@ -1,5 +1,6 @@
 package com.example.breathing_app
 
+import androidx.compose.ui.unit.dp
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -7,11 +8,14 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.breathing_app.ui.theme.Breathing_appTheme
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,10 +36,12 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(appName: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Welcome to $appName!",
-        modifier = modifier
-    )
+    Surface(color=Color.Green) {
+        Text(
+            text = "Welcome to $appName!",
+            modifier = modifier.padding(24.dp)
+        )
+    }
 }
 
 @Preview(showBackground = true)
