@@ -46,10 +46,28 @@ fun InteractiveButton() {
 
     Column {
         // Composable function
-        Button(onClick = { "to be filled in" }) {
+        Button(onClick = { "Have it display the SubPage" }) {
             Text(text = "Send Amount")
         }
     }
+}
+
+@Composable
+fun FillerNavigation() {
+    //https://developer.android.com/develop/ui/compose/navigation#kts
+}
+
+
+@Composable
+fun SubPage(appName: String, modifier: Modifier = Modifier) {
+    Surface(color=Color.Black) {
+        Text(
+            text = "Welcome to the subpage!",
+            color = Color.White,
+            modifier = modifier.padding(24.dp)
+        )
+    }
+
 }
 
 @Composable
